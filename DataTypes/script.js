@@ -29,3 +29,6 @@ const obj = {
 
 console.log(obj.name);
 console.log("Object:" , typeof(obj));
+
+let arr = ['image.png', 'photo.jpg', {}, []];
+console.log(arr[2]);
