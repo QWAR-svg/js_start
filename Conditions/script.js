@@ -1,5 +1,7 @@
 "use strict";
 
+// Conditions
+
 if (4 == 5) {
     console.log('true');
 }
@@ -21,4 +23,20 @@ let num = 50;
 switch (num) {
     case 50: console.log('Woo');
     break;
+}
+
+// Loops
+
+while (num == 50) {
+    console.log('50') 
+    num++;
+}
+
+do {
+    console.log('50') 
+    num++;
+} while (num < 45);
+
+for (let i = 0; i < 8; i++) {
+    console.log(i);
 }
