@@ -1,6 +1,5 @@
 "use strict";
 
-start();
 
 const personalMovieDB = {
     count: 0,
@@ -73,11 +72,11 @@ const personalMovieDB = {
         }
 
         personalMovieDB.genres.forEach((item, i) => {
-            console.log("Enter favourite number");
-        })
+            console.log(`Enter favourite number ${i + 1} ${item}`);
+        });
     }
 
 }
 
 
-
+personalMovieDB.start();
