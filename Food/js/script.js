@@ -63,6 +63,13 @@ window.addEventListener('DOMContentLoaded', () => {
         };
     }
     
+    function getZero(num) {
+        if (num >= 0 && num < 10) {
+            return `0${num}`;
+        } else {
+            return num;
+        }
+    }
     
 
     function setClock(selector, endtime) {
@@ -78,16 +85,66 @@ window.addEventListener('DOMContentLoaded', () => {
         function updateClock() {
             const t = getTimeRemaining(endtime);
 
-            days.innerHTML = t.days;
-            hours.innerHTML = t.hours;
-            minutes.innerHTML = t.minutes;
-            seconds.innerHTML = t.seconds;
-        }
+            days.innerHTML = getZero(t.days);
+            hours.innerHTML = getZero(t.hours);
+            minutes.innerHTML = getZero(t.minutes);
+            seconds.innerHTML = getZero(t.seconds);
 
-        if (t.total <= 0) {
-            clearInterval(timeInterval);
-        }
+            if (t.total <= 0) {
+                clearInterval(timeInterval);
+            }
+        }        
     }
     
     setClock('.timer', deadline);
+
+    // Modal
+
+    const modalTrigger = document.querySelectorAll('[data-modal]'),
+    modal = document.querySelector('.modal'),
+    modalCloseBtn = document.querySelector('[data-close]');
+
+    function openModal() {
+        modal.classList.add('show');
+        modal.classList.remove('hide');
+        document.body.style.overflow = 'hidden';
+        clearInterval(modalTimerId);
+    }
+
+    modalTrigger.forEach(btn => {
+        btn.addEventListener('click', openModal);
+    });
+
+    
+    function closeBtn() {
+            modal.classList.add('hide');
+            modal.classList.remove('show');
+            document.body.style.overflow = '';
+    }
+
+    modalCloseBtn.addEventListener('click', closeBtn);
+
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            closeBtn();
+        }
+    });
+
+    document.addEventListener('keydown', (e) => {
+        if (e.code == "Escape" && modal.classList.contains('show')) {
+            closeBtn();
+        }
+    });
+
+
+    const modalTimerId = setTimeout(openModal, 3000);
+
+    function showModalByScroll() {
+        if (window.pageYOffset + document.documentElement.clientHeight >= document.documentElement.scrollHeight) {
+            openModal();
+            window.removeEventListener('scroll', showModalByScroll);
+        }
+    }
+
+    window.addEventListener('scroll', showModalByScroll);
 });

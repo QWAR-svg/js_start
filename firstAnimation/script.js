@@ -20,7 +20,31 @@ function IAnimation() {
     }
 }
 
-btn.addEventListener('click', IAnimation);
+function deb() {
+    const element = document.querySelector('.box');
+    let x = 0;
+    const id = setInterval(wou, 30);
+
+    function wou() {
+        x++;
+        if (x > 50) {
+            const one = setInterval(whi, 30);
+        function whi() {
+                if (x < 0) {
+                    clearInterval(one);
+                }    
+                 x--;
+                 element.style.top = x + "px";
+            }
+        } else {
+            element.style.top = x + "px";
+        }
+    }
+}
+
+deb();
+
+// btn.addEventListener('click', IAnimation);
 
 // btn.addEventListener('click', () => {
     
