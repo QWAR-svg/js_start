@@ -234,7 +234,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
     // Forms
 
-    const forms = document.querySelector('form');
+    const forms = document.querySelectorAll('form');
 
     const message = {
         loading: "Loading",
