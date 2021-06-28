@@ -1,13 +1,13 @@
 "use strict";
 
-function show(a, b) {
-    console.log(this);
-    function sum() {
-        console.log(this);
-        return a + b;
-    }
-    console.log(sum());
-}
+// function show(a, b) {
+//     console.log(this);
+//     function sum() {
+//         console.log(this);
+//         return a + b;
+//     }
+//     console.log(sum());
+// }
 
 
 
@@ -70,16 +70,18 @@ console.log(double(3));
 //     this.style.backgroundColor = "red";
 // });
 
-const obj = {
-    num: 5,
-    sayNumber: function() {
-        const say = () => {
-            console.log(this.num);
-        }
-        say();
-    }
-}
+// const obj = {
+//     num: 5,
+//     sayNumber: function() {
+//         const say = () => {
+//             console.log(this.num);
+//         }
+//         say();
+//     }
+// }
 
-obj.sayNumber();
+// obj.sayNumber();
 
-const calc = (a) => a * 2;
+// const calc = (a) => a * 2;
+
+console.log(0 % 2);
