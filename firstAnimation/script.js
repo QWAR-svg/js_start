@@ -4,45 +4,45 @@ const btn = document.querySelector('.btn');
 let i;
 let time;
 
-function IAnimation() {
-    const element = document.querySelector('.box');
-    let pos = 0;
-    const id = setInterval(frame, 10);
+// function IAnimation() {
+//     const element = document.querySelector('.box');
+//     let pos = 0;
+//     const id = setInterval(frame, 10);
 
-    function frame() {
-        if (pos == 300) {
-            clearInterval(id);
-        } else {
-            pos++;
-            element.style.top = pos + "px";
-            element.style.left = pos + "px";
-        }
-    }
-}
+//     function frame() {
+//         if (pos == 300) {
+//             clearInterval(id);
+//         } else {
+//             pos++;
+//             element.style.top = pos + "px";
+//             element.style.left = pos + "px";
+//         }
+//     }
+// }
 
-function deb() {
-    const element = document.querySelector('.box');
-    let x = 0;
-    const id = setInterval(wou, 30);
+// function deb() {
+//     const element = document.querySelector('.box');
+//     let x = 0;
+//     const id = setInterval(wou, 30);
 
-    function wou() {
-        x++;
-        if (x > 50) {
-            const one = setInterval(whi, 30);
-        function whi() {
-                if (x < 0) {
-                    clearInterval(one);
-                }    
-                 x--;
-                 element.style.top = x + "px";
-            }
-        } else {
-            element.style.top = x + "px";
-        }
-    }
-}
+//     function wou() {
+//         x++;
+//         if (x > 50) {
+//             const one = setInterval(whi, 30);
+//         function whi() {
+//                 if (x < 0) {
+//                     clearInterval(one);
+//                 }    
+//                  x--;
+//                  element.style.top = x + "px";
+//             }
+//         } else {
+//             element.style.top = x + "px";
+//         }
+//     }
+// }
 
-deb();
+// deb();
 
 // btn.addEventListener('click', IAnimation);
 
@@ -64,6 +64,22 @@ deb();
 // }, 500);
 
 
+const element = document.querySelector('.box');
+let pos = 0;
+
+function IAnimation() {
+    pos++;
+    element.style.top = pos + "px";
+    element.style.left = pos + "px";
+
+   if (pos < 300) {
+    requestAnimationFrame(IAnimation);
+   } 
+    
+   
+}
+
+btn.addEventListener('click', () => requestAnimationFrame(IAnimation));
 
 
 
