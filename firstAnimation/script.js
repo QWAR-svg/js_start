@@ -1,8 +1,6 @@
-"use strict";
+'use strict';
 
 const btn = document.querySelector('.btn');
-let i;
-let time;
 
 // function IAnimation() {
 //     const element = document.querySelector('.box');
@@ -32,7 +30,7 @@ let time;
 //         function whi() {
 //                 if (x < 0) {
 //                     clearInterval(one);
-//                 }    
+//                 }
 //                  x--;
 //                  element.style.top = x + "px";
 //             }
@@ -47,7 +45,6 @@ let time;
 // btn.addEventListener('click', IAnimation);
 
 // btn.addEventListener('click', () => {
-    
 
 //     time = setInterval(function () {
 //         if (i == 3) {
@@ -63,27 +60,17 @@ let time;
 //     id = setTimeout(log, 500);
 // }, 500);
 
-
 const element = document.querySelector('.box');
 let pos = 0;
 
 function IAnimation() {
-    pos++;
-    element.style.top = pos + "px";
-    element.style.left = pos + "px";
+  pos++;
+  element.style.top = pos + 'px';
+  element.style.left = pos + 'px';
 
-   if (pos < 300) {
+  if (pos < 300) {
     requestAnimationFrame(IAnimation);
-   } 
-    
-   
+  }
 }
 
 btn.addEventListener('click', () => requestAnimationFrame(IAnimation));
-
-
-
-
-
-
-

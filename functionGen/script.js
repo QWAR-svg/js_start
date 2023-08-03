@@ -1,8 +1,9 @@
+/* eslint-disable strict */
 function* generator() {
-    yield 'B';
-    yield 'K';
-    yield 'p';
-};
+  yield 'B';
+  yield 'K';
+  yield 'p';
+}
 
 const str = generator();
 

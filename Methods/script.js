@@ -1,18 +1,17 @@
-"use strict";
+'use strict';
 
-const str = "word"; 
-const array = [1, 4 , 7];
+const str = 'word';
 
 // console.log(str[3] = 'q'); // Will not change
-console.log(str.replace("o", "b"));
+console.log(str.replace('o', 'b'));
 
-const apple = "apple";
+const apple = 'apple';
 
-const word = "Hi world";
+const word = 'Hi world';
 
 console.log(word.slice(4, 9));
 
-console.log(apple.indexOf("pl")); // 2
+console.log(apple.indexOf('pl')); // 2
 
 console.log(word.substring(4, 9));
 
@@ -23,9 +22,6 @@ const num = 1543.2;
 
 console.log(Math.round(num));
 
-const px = "13.4px";
+const px = '13.4px';
 
 console.log(parseInt(px)); // 13
-
-
-

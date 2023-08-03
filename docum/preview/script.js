@@ -1,11 +1,10 @@
 'use strict';
 
 const box = document.querySelector('.box'),
-btn = document.querySelector('button');
+  btn = document.querySelector('button');
 
 const width = box.offsetWidth;
 const height = box.scrollHeight;
-
 
 console.log(width, height);
 
@@ -21,7 +20,7 @@ console.log(width, height);
 // });
 
 btn.addEventListener('click', () => {
-    console.log(box.scrollTop);
+  console.log(box.scrollTop);
 });
 
 console.log(box.getBoundingClientRect().top);
@@ -33,4 +32,3 @@ console.log(style.display);
 console.log(document.documentElement.scrollTop);
 
 // window.scrollBy()
-

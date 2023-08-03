@@ -1,17 +1,19 @@
-"use stric";
+/* eslint-disable strict */
+/* eslint-disable no-unused-vars */
+'use stric';
 
 // Primitive types :
 // Numbers, Strings, Boolean, null, undefined, Symbol, BigInt
 
-// Special Objects 
+// Special Objects
 // Arrays, Functions, Date objects, error
 
-let number = 4.6;
+const number = 4.6;
 
 console.log(2 / 0); //Infinity
 console.log(9 * 'string'); // Nan
 
-const person = "Name: Sasha";
+const person = 'Name: Sasha';
 console.log(person);
 
 const bool = true;
@@ -23,12 +25,12 @@ let box;
 console.log(box); // Undefined
 
 const obj = {
-    name: "Bob",
-    age: 24
-}
+  name: 'Bob',
+  age: 24,
+};
 
 console.log(obj.name);
-console.log("Object:" , typeof(obj));
+console.log('Object:', typeof obj);
 
-let arr = ['image.png', 'photo.jpg', {}, []];
+const arr = ['image.png', 'photo.jpg', {}, []];
 console.log(arr[2]);

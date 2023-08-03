@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 // Interpolation
 
@@ -6,12 +6,12 @@ const ctg = 'toys';
 
 console.log(`https://url.com/${ctg}`);
 
-// Operators 
+// Operators
 
-console.log(4 + +"6");
+console.log(4 + +'6');
 
-let incr = 2, 
-    decr = 4;
+let incr = 2,
+  decr = 4;
 
 console.log(incr++);
 console.log(decr--);
@@ -21,11 +21,9 @@ console.log(--decr);
 
 console.log(7 % 3);
 
-const a = true, b = false;
+const a = true,
+  b = false;
 
 console.log(a && b);
 
-
-console.log( 3 || 2 && 5); // 3
-
-
+console.log(3 || (2 && 5)); // 3

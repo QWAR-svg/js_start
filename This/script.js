@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 // function show(a, b) {
 //     console.log(this);
@@ -8,8 +8,6 @@
 //     }
 //     console.log(sum());
 // }
-
-
 
 // show(4, 9);
 
@@ -48,13 +46,12 @@
 // sayName.apply(user);
 
 function count(num) {
-    return this*num;
+  return this * num;
 }
 
 const double = count.bind(2);
 
 console.log(double(3));
- 
 
 // 1) Обычная функция: this - Window, "use strict" - undefined
 

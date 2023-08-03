@@ -1,15 +1,15 @@
-"use strict";
+'use strict';
 
-// /pattern/f 
+// /pattern/f
 
-const ans =  "Ann";
+const ans = 'Ann';
 
 const reg = /A/g;
 
-// i, g, m 
+// i, g, m
 
 console.log(ans.search(reg));
 
-console.log('12-53-65'.replace(/-/g, ""));
+console.log('12-53-65'.replace(/-/g, ''));
 
-/\d \w \s/
+/\d \w \s/;

@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 'use strict';
 
 const box = document.getElementById('box');
@@ -29,7 +30,6 @@ box.style.backgroundColor = 'blue';
 //     }
 // });
 
-
 // hearts.forEach((item) => {
 //     item.addEventListener('click', () => {
 //         if (item.style.backgroundColor == 'red') {
@@ -48,10 +48,10 @@ box.style.backgroundColor = 'blue';
 //         } else if (i == 0) {
 //             box.style.backgroundColor = 'blue';
 //             i++;
-//         } 
+//         }
 // });
 
-const div =document.createElement('div');
+const div = document.createElement('div');
 const text = document.createTextNode('Hellou');
 
 div.classList.add('black');
@@ -59,23 +59,18 @@ div.classList.add('black');
 document.body.append(div);
 
 let x = 1;
-box.addEventListener('click', () =>{
-    if (x == 1) {
-        document.querySelector('.wrapper').prepend(div);
-        x--;
-    } else {
-        document.querySelector('.wrapper').append(div);
-        x++;
-    }
-    
-
+box.addEventListener('click', () => {
+  if (x === 1) {
+    document.querySelector('.wrapper').prepend(div);
+    x--;
+  } else {
+    document.querySelector('.wrapper').append(div);
+    x++;
+  }
 });
 // document.querySelector('.wrapper').prepend(div);
 
-div.innerHTML = "Hello World";
-div.textContent = "Hello"; //Only text
+div.innerHTML = 'Hello World';
+div.textContent = 'Hello'; //Only text
 
-div.insertAdjacentHTML("afterend", '<h3>Hello<h3>');
-
-
-
+div.insertAdjacentHTML('afterend', '<h3>Hello<h3>');

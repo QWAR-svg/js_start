@@ -1,19 +1,20 @@
-"use strict";
+/* eslint-disable no-unused-vars */
+'use strict';
 
 const obj = new Object(); // Do not use
 
 const block = {
-    name: 'Bob',
-    width: 256,
-    height: 512, 
-    colors: {
-        border: '1px',
-        color: 'blue'
-    },
+  name: 'Bob',
+  width: 256,
+  height: 512,
+  colors: {
+    border: '1px',
+    color: 'blue',
+  },
 
-    make: function() {
-        console.log("Method");
-    }
+  make() {
+    console.log('Method');
+  },
 };
 
 // console.log(block.name);
@@ -37,5 +38,5 @@ console.log(Object.keys(block).length);
 
 block.make();
 
-const {border, color} = block.colors;
+const { border, color } = block.colors;
 console.log(border);

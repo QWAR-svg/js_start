@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 // let x = 5; alert(x++); 5
 // let x = 5; alert(++x); 6
@@ -19,7 +19,3 @@
 // И запинается на лжи
 
 // alert(null || 2 && 3 || 4);
-
-
-
-
