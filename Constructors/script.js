@@ -9,12 +9,12 @@ function User(name, id) {
   this.name = name;
   this.id = id;
   this.human = true;
-  this.cool = function() {
+  this.cool = function () {
     console.log(`Hello ${this.name}`);
   };
 }
 
-User.prototype.exit = function() {
+User.prototype.exit = function () {
   console.log(`Bye ${this.name}`);
 };
 

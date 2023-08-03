@@ -19,7 +19,7 @@ console.log(calc(4, 6));
 
 // Function expression
 
-const log = function() {
+const log = function () {
   //Do something
 };
 

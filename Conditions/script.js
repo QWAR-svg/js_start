@@ -21,9 +21,9 @@ let num = 50;
 num === 50 ? console.log('cool') : console.log('bad');
 
 switch (num) {
-case 50:
-  console.log('Woo');
-  break;
+  case 50:
+    console.log('Woo');
+    break;
 }
 
 // Loops

@@ -10,7 +10,7 @@ console.log(typeof String(4));
 
 // 2)
 
-console.log(typeof(5 + ''));
+console.log(typeof (5 + ''));
 
 const num = 5;
 
@@ -28,7 +28,7 @@ console.log(typeof Number('4'));
 
 // 2)
 
-console.log(typeof+'5');
+console.log(typeof +'5');
 
 // 3)
 
